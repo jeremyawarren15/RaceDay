@@ -11,13 +11,16 @@ namespace RaceDay
     {
         static void Main(string[] args)
         {
-            Player player = new Player(5);
-            // TODO: add enemies
+            // Player
+            Player player = new Player(0);
+            
+            // Opponents
             List<Opponent> opponents = new List<Opponent>();
             opponents.Add(new Opponent(0));
             opponents.Add(new Opponent(0));
             opponents.Add(new Opponent(0));
-            // TODO: create a course
+            
+            // Make a course
             Course c = new Course(player, opponents, 100);
 
             // Initiate movement for player
@@ -51,6 +54,7 @@ namespace RaceDay
             {
                 while (true)
                 {
+                    // Logic for imitating stumble
                     var key = Console.ReadKey();
                     var key2 = Console.ReadKey();
                     if (key.Key == ConsoleKey.Z)
