@@ -81,6 +81,10 @@ namespace RaceDay
                             player.Momentum = 0;
                         }
                     }
+                    else
+                    {
+                        player.Momentum = 0;
+                    }
                 }
             }
 
