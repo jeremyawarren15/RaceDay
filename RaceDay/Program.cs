@@ -61,14 +61,24 @@ namespace RaceDay
                     {
                         if (key2.Key == ConsoleKey.M)
                         {
-                            c.MovePerson(player, 1);
+                            player.Momentum++;
+                            c.MovePerson(player, player.Momentum);
+                        }
+                        else
+                        {
+                            player.Momentum = 0;
                         }
                     }
                     else if (key.Key == ConsoleKey.M)
                     {
                         if (key2.Key == ConsoleKey.Z)
                         {
-                            c.MovePerson(player, 1);
+                            player.Momentum++;
+                            c.MovePerson(player, player.Momentum);
+                        }
+                        else
+                        {
+                            player.Momentum = 0;
                         }
                     }
                 }

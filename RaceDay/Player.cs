@@ -8,6 +8,9 @@ namespace RaceDay
 {
     class Player : Person
     {
+        // Backing Fields
+        private int _momentum;
+
         // Constructors
         public Player()
         {
@@ -18,5 +21,28 @@ namespace RaceDay
         {
             this.XPos = startPos;
         }
+
+        
+
+        public int Momentum
+        {
+            get { return _momentum; }
+            set
+            {
+                if (value <= 4 && value >= 0) {
+                    _momentum = value;
+                }
+                else if (value < 0)
+                {
+                    _momentum = 0;
+                }
+                else
+                {
+                    _momentum = 4;
+                }
+                
+            }
+        }
+
     }
 }
